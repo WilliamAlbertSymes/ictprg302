@@ -44,7 +44,7 @@ def sendEmail(message, dateTimeStamp):
 def error(errorMessage, dateTimeStamp):
     print(errorMessage)
     Logging(f"FAILURE {errorMessage} ", dateTimeStamp)#write failure to log file
-    sendEmail(errorMessage , dateTimeStamp)#email message to admin
+    #sendEmail(errorMessage , dateTimeStamp)#email message to admin
     
 
 
@@ -57,14 +57,14 @@ def main():
     else:
         jobname = sys.argv[1]
         if jobname not in jobs:# testing if job name is vailed
-            error("ERROR: jobname is not in jobs", dateTimeStamp)
+            error(f"ERROR: jobname is not in jobs", dateTimeStamp)
         else:
             for srcPath in jobs[jobname]:
                 if not os.path.exists(srcPath):# testing the path to source
-                    error("ERROR: Source path file does not exist.", dateTimeStamp)
+                    error(f"ERROR: Source path file does not exist.", dateTimeStamp)
                 else:
                     if not os.path.exists(destPath):# testing pasth to destination
-                        error("ERROR: Destination path {destPath} does not exists", dateTimeStamp)
+                        error(f"ERROR: Destination path {destPath} does not exists", dateTimeStamp)
                     else:
                         
                         srcDetails = pathlib.PurePath(srcPath)

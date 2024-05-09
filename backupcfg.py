@@ -1,6 +1,8 @@
 jobs ={'job17': ['/home/ec2-user/environment/ictprg302/file1.dat'],
        'job18': ['/home/ec2-user/environment/ictprg302/dict.dat'],
-       'job19': ['/home/ec2-user/environment/ictprg302/file1.dat','/home/ec2-user/environment/ictprg302/file2.dat','/home/ec2-user/environment/ictprg302/file3.dat']}
+       'job19': ['/home/ec2-user/environment/ictprg302/file1.dat','/home/ec2-user/environment/ictprg302/file2.dat','/home/ec2-user/environment/ictprg302/file3.dat'],
+       'job20': ['/home/ec2-user/environment/ictprg302/directy1']
+}
        
 destPath = '/home/ec2-user/environment/ictprg302/backups'  
 
